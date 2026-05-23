@@ -1,0 +1,58 @@
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: "Greg's Portfolio of Small Bets",
+  description: "Tech Courses and Books",
+  keywords:
+    "passive income, small bets, tech courses, tech books, tech tutorials",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        {" "}
+        <div className="$$navbar bg-base-100 shadow-sm">
+          <div className="flex-1">
+            <a className="$$btn $$btn-ghost text-xl">daisyUI</a>
+          </div>
+          <div className="flex-none">
+            <ul className="$$menu $$menu-horizontal px-1">
+              <li>
+                <a>Link</a>
+              </li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul className="bg-base-100 rounded-t-none p-2">
+                    <li>
+                      <a>Link 1</a>
+                    </li>
+                    <li>
+                      <a>Link 2</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {children}
+      </body>
+    </html>
+  );
+}
