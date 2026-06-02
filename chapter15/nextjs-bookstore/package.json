@@ -1,0 +1,24 @@
+{
+  "name": "nextjs-bookstore",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rimraf .next",
+    "dev:fresh": "rimraf .next && next dev --turbopack"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.0",
+    "daisyui": "^5.5.20",
+    "next": "16.2.6",
+    "postcss": "^8.5.15",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "rimraf": "^6.1.3"
+  }
+}
